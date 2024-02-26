@@ -1,19 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { Candy } from '../../model/candy';
+import { Observable } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-candy-list',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './candy-list.component.html',
   styleUrl: './candy-list.component.scss',
 })
 export class CandyListComponent implements OnInit {
+  candies$!: Observable<Candy[]>;
+
   constructor(private apiService: ApiService) {}
-  public candies!: Candy[];
 
   ngOnInit(): void {
-    this.apiService.getCandies().subscribe((data) => (this.candies = data));
+    this.candies$ = this.apiService.getCandies();
   }
 }
