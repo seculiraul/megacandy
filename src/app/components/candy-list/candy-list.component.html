@@ -1,0 +1,8 @@
+<div style="display: flex; flex-direction: column; gap: 10px">
+  @for(candy of candies; track candy) {
+  <div>
+    <label style="font-weight: bold">{{ candy?.name }}</label>
+    <label>{{ candy?.price }}</label>
+  </div>
+  }
+</div>
