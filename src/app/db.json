@@ -1,21 +1,21 @@
 {
   "candies": [
     {
-      "id": 1,
+      "id": "1",
       "name": "peanut love",
       "price": 42,
       "description:": "a candy with peanut flavor",
       "isNew": false
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "coconut magia",
       "price": 112,
       "description:": "intense coconut feeling",
       "isNew": false
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "chocolate dream",
       "price": 50,
       "description:": "a mix between dark and milk chocolate",
