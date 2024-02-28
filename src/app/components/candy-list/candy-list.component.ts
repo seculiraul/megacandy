@@ -19,4 +19,8 @@ export class CandyListComponent implements OnInit {
   ngOnInit(): void {
     this.candies$ = this.apiService.getCandies();
   }
+
+  add() {
+    this.apiService.addCandy().subscribe((res) => console.log(res));
+  }
 }
