@@ -7,10 +7,11 @@ import { Candy } from '../model/candy';
   providedIn: 'root',
 })
 export class ApiService {
+  baseurl = 'http://localhost:3000/candies';
   constructor(private http: HttpClient) {}
 
   public getCandies(): Observable<Candy[]> {
-    return this.http.get<Candy[]>('http://localhost:3000/candies');
+    return this.http.get<Candy[]>(this.baseurl);
   }
 
   public addCandy(): Observable<any> {
@@ -21,6 +22,6 @@ export class ApiService {
       price: 22,
       isNew: false,
     };
-    return this.http.post('http://localhost:3000/candies', candy);
+    return this.http.post(this.baseurl, candy);
   }
 }
