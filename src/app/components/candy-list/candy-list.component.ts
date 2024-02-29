@@ -3,11 +3,12 @@ import { ApiService } from '../../services/api.service';
 import { Candy } from '../../model/candy';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { CandyCardComponent } from '../candy-card/candy-card.component';
 
 @Component({
   selector: 'app-candy-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CandyCardComponent],
   templateUrl: './candy-list.component.html',
   styleUrl: './candy-list.component.scss',
 })

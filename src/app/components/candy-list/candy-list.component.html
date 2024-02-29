@@ -1,9 +1,11 @@
 <div style="display: flex; flex-direction: column; gap: 10px">
   @for(candy of (candies$ | async) ; track candy) {
-  <div>
-    <label style="font-weight: bold">{{ candy?.name }}</label>
-    <label>{{ candy?.price }}</label>
-  </div>
+  <app-candy-card [candy]="candy"></app-candy-card>
   }
 </div>
-<button (click)="add()">press</button>
+<button
+  class="bg-zinc-500 p-2 text-white rounded-xl hover:bg-zinc-600 hover:scale-125 duration-500"
+  (click)="add()"
+>
+  press
+</button>
